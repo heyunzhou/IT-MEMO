@@ -50,3 +50,13 @@ mysql -h<host> -u<user> -p<password> < backup.sql
 
 mysql备份策略
 https://segmentfault.com/a/1190000019955399
+
+## 3.CSV
+
+```mysql
+LOAD DATA INFILE '/path/data.csv' INTO TABLE tName
+FIELDS OPTIONALLY
+ENCLOSED BY '"'
+terminated by ',';
+```
+
