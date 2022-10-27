@@ -100,6 +100,7 @@ find path -perm 777
 #ユーザーで検索
 find path -user root
 #変更時間で検索
+find path -mtime -0 #今日変更しｔ
 find path -mtime -5 #5日以内のもの
 find path -mtime +3 #3日以前のもの
 #サイズで検索
@@ -238,6 +239,8 @@ echo $BASHPID
 df -h
 #メモリの確認
 free
+# フォルダ内のものを全部LFに転換
+find . -type f -print0 | xargs -0 dos2unix
 ```
 
 ### 並行処理
