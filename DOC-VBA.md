@@ -121,3 +121,8 @@ Loop
 MsgBox msg
 ```
 
+# Excel関数
+
+## 01.SQLデータ結合用
+
+`=CLEAN(CONCAT("""", TEXTJOIN(""",""", FALSE, B13:N13), """"))`

@@ -69,23 +69,29 @@ Output control:
 
 ## 使い方
 
-### 複数キーを検索（OR）
+### 文法
 
 ```shell
-grep –E 'key1|key2' *.txt
+grep [options] search_string path/to/file
 ```
 
-### 複数キーを検索（AND）
+### 行検索（複数キーOR）
 
 ```shell
-grep key1 *.txt | grep key2
+grep –E 'key1|key2' file
 ```
 
-### 複数キー含むファイルを検索（AND）
+### 行検索（複数キーAND）
+
+```shell
+grep key1 file | grep key2
+```
+
+### ファイル検索（複数キーAND）
 
 ```shell
 # 拡張子指定
-grep --include=\*.sql -rlE key1 targerFolder/ | grep -l key2
+grep --include=\*.sql -rlE key1 Folder | xargs grep -l key2
 # フォルダを除外
-grep --exclude-dir={folder1,folder2} -rlE key1 targerFolder/ | grep -l key2
+grep --exclude-dir={folder1,folder2} -rlE key1 Folder | xargs grep -l key2
 ```
