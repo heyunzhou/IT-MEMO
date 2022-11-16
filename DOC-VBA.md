@@ -32,6 +32,62 @@
 | InStr(string,find)                | sub文字のIndexを返す。無い場合、０を返す |
 | StrConv(string, vbWide｜vbNarrow) | 文字列を【全角｜半角】に転換             |
 
+## 04.コレクション
+
+### Array
+
+```vb
+Sub learnArray()
+  Dim myArray As Variant
+  Dim i As Integer
+    myArray = Array("el1", "el2", "el3")
+  For i = 0 To UBound(myArray)
+    debug.Print myArray(i)
+  Next
+End Sub
+```
+
+### Map
+
+```vb
+' Map Sample
+Dim map As Object
+Set map = CreateObject("Scripting.Dictionary")
+map.Add "key", "value"
+map(key)
+```
+
+#### メソッド
+
+| メソッド                                              | 用法                                                         | 内容                                                 |
+| :---------------------------------------------------- | :----------------------------------------------------------- | :--------------------------------------------------- |
+| Add                                                   | object.Add (key， item)                                      | 1 組のキーと項目を追加                               |
+| Exists                                                | object.Exists(key)                                           | キーが Dictionary オブジェクト内に存在する場合は、真 |
+| Items                                                 | object.Items()                                               | オブジェクト内のすべての項目を格納した配列を返す     |
+| Keys                                                  | object.Keys()                                                | すべての既存キーを格納した配列を返す                 |
+| [Remove](https://www.typea.info/tips_/index.php/R)    | object.[Remove](https://www.typea.info/tips_/index.php/R)(key) | キーと項目の組みを削除                               |
+| [Remove](https://www.typea.info/tips_/index.php/R)All | object.[Remove](https://www.typea.info/tips_/index.php/R)All() | すべてのキーと項目を削除                             |
+
+#### プロパティ
+
+| プロパティ | 用法                         | 内容                                       |
+| :--------- | :--------------------------- | :----------------------------------------- |
+| Count      | object.Count                 | 項目の数を返す                             |
+| Item       | object.Item(key)[ = newitem] | 指定されたキーと関連付ける項目を設定、取得 |
+| Key        | object.Key(key) = newkey     | キーを設定                                 |
+
+### List
+
+```vb
+' List Sample
+Dim list As New collection
+list.Add "value"
+list(index) ' start from 1
+list.Remove(index)
+```
+
+
+
 # Snippets
 
 ## 01.テキストに出力
