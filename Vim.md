@@ -4,32 +4,118 @@
 
 ```json
 {
-    "workbench.colorTheme": "Default Dark+",
-    "vim.commandLineModeKeyBindingsNonRecursive": [
-
-    
-    ],
+    "tabnine.experimentalAutoImports": true,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "editor.fontSize": 16,
     "vim.handleKeys": {
         "<C-d>": true,
-        "<C-s>": false,
-        "<C-x>": false,
+        "<C-a>": false,
         "<C-c>": false,
-        "<C-v>": false,
+        "<C-x>": false,
+        "<C-f>": false,
+        "<C-h>": false,
+        "<C-s>": false,
         "<C-z>": false,
-        "<C-f>": false
+        "<C-v>": false,
+        "<C-.>": false,
+        "<C-y>": false
     },
-    "editor.codeActionsOnSave": {
-    
-    },
-    "editor.semanticTokenColorCustomizations": {
-    
-    },
-    "vim.autoSwitchInputMethod.enable": true,
-    "vim.autoSwitchInputMethod.defaultIM": "0",
-    "vim.autoSwitchInputMethod.obtainIMCmd": "C:\\LocalWork\\07.vscode\\zenhan-master\\zenhan\\bin64\\zenhan.exe",
-    "vim.autoSwitchInputMethod.switchIMCmd": "C:\\LocalWork\\07.vscode\\zenhan-master\\zenhan\\bin64\\zenhan.exe {im}",
-    "vim.commandLineModeKeyBindings": [
-    
+    "editor.lineNumbers": "on",
+    "liveServer.settings.donotShowInfoMsg": true,
+    "workbench.colorTheme": "Visual Studio Dark",
+    "vim.commandLineModeKeyBindings": [],
+    "vim.normalModeKeyBindings": [
+        {
+            "before": ["v","w"],
+            "after":  ["v","i","w"]
+        },
+        {
+            "before": ["c","w"],
+            "after":  ["c","i","w"]
+        },
+        {
+            "before": ["d","w"],
+            "after":  ["d","i","w"]
+        },
+        {
+            "before": ["y","w"],
+            "after":  ["y","i","w"]
+        },
+        {
+            "before": ["v","b"],
+            "after":  ["v","i","b"]
+        },
+        {
+            "before": ["c","b"],
+            "after":  ["c","i","b"]
+        },
+        {
+            "before": ["d","b"],
+            "after":  ["d","i","b"]
+        },
+        {
+            "before": ["y","b"],
+            "after":  ["y","i","b"]
+        },
+        {
+            "before": ["v","B"],
+            "after":  ["v","i","B"]
+        },
+        {
+            "before": ["c","B"],
+            "after":  ["c","i","B"]
+        },
+        {
+            "before": ["d","B"],
+            "after":  ["d","i","B"]
+        },
+        {
+            "before": ["y","B"],
+            "after":  ["y","i","B"]
+        },
+        {
+            "before": ["v","\""],
+            "after":  ["v","i","\""]
+        },
+        {
+            "before": ["c","\""],
+            "after":  ["c","i","\""]
+        },
+        {
+            "before": ["d","\""],
+            "after":  ["d","i","\""]
+        },
+        {
+            "before": ["y","\""],
+            "after":  ["y","i","\""]
+        },
+        {
+            "before": ["H"],
+            "after":  ["^"]
+        },
+        {
+            "before": ["L"],
+            "after":  ["$"]
+        },
+        {
+            "before": ["<C-e>"],
+            "after":  ["%"]
+        }
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": ["H"],
+            "after":  ["^"]
+        },
+        {
+            "before": ["L"],
+            "after":  ["$"]
+        },
+        {
+            "before": ["<C-e>"],
+            "after":  ["%"]
+        }
     ]
 }
 ```
@@ -39,6 +125,13 @@
 ### 日本語設定
 
 https://github.com/iuchim/zenhan
+
+```
+"vim.autoSwitchInputMethod.enable": true,
+"vim.autoSwitchInputMethod.defaultIM": "0",
+"vim.autoSwitchInputMethod.obtainIMCmd": "D:\\bin\\zenhan.exe",
+"vim.autoSwitchInputMethod.switchIMCmd": "D:\\bin\\zenhan.exe {im}"
+```
 
 `build.sh`をビルドする前に、下記をインストール
 
