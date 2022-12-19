@@ -24,6 +24,7 @@
     "editor.lineNumbers": "on",
     "liveServer.settings.donotShowInfoMsg": true,
     "workbench.colorTheme": "Visual Studio Dark",
+    "vim.leader": "<space>",
     "vim.commandLineModeKeyBindings": [],
     "vim.normalModeKeyBindings": [
         {
@@ -99,8 +100,20 @@
             "after":  ["$"]
         },
         {
-            "before": ["<C-e>"],
-            "after":  ["%"]
+            "before": ["n"],
+            "after":  ["n","z","z"]
+        },
+        {
+            "before": ["N"],
+            "after":  ["N","z","z"]
+        },
+        {
+            "before": [">"],
+            "after":  [">",">"]
+        },
+        {
+            "before": ["<"],
+            "after":  ["<","<"]
         }
     ],
     "vim.visualModeKeyBindingsNonRecursive": [
@@ -113,8 +126,18 @@
             "after":  ["$"]
         },
         {
-            "before": ["<C-e>"],
-            "after":  ["%"]
+            "before": [">"],
+            "after":  [">","g","v"]
+        },
+        {
+            "before": ["<"],
+            "after":  ["<","g","v"]
+        }
+    ],
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["j","j"],
+            "after":  ["<Esc>"]
         }
     ]
 }
