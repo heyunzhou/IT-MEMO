@@ -1,0 +1,116 @@
+" https://github.com/JetBrains/ideavim
+let mapleader=" "
+"" -- Suggested options --
+" Show a few lines of context around the cursor. Note that this makes the
+" text scroll if you mouse-click near the start or end of the window.
+set scrolloff=5
+map <leader>9 <Action>(IdeaVim.ReloadVimRc.reload)
+
+"" -- SEARCHING --
+set incsearch
+set hlsearch
+nmap <Esc><Esc> :nohl<CR>
+set ignorecase
+set smartcase
+
+
+" Don't use Ex mode, use Q for formatting.
+map Q gq
+
+"" -- VIM PLUGINS --
+set surround
+set ideajoin
+set highlightedyank
+set multiple-cursors
+set ReplaceWithRegister
+set exchange
+set easymotion
+nmap f <Plug>(easymotion-s2)
+
+"" -- NORMAL MODE --
+nnoremap J 5j
+nnoremap K 5k
+nnoremap gj J
+
+" motion full method
+nnoremap vm vaBV
+nnoremap dm vaBVd
+nnoremap cm vaBVc
+nnoremap ym vaBVy
+
+nnoremap <leader>; "0p
+nnoremap vv <C-v>
+
+nnoremap vw viw
+nnoremap yw yiw
+nnoremap cw ciw
+nnoremap dw diw
+
+nnoremap vb vib
+nnoremap yb yib
+nnoremap cb cib
+nnoremap db dib
+
+nnoremap vB viB
+nnoremap yB yiB
+nnoremap cB ciB
+nnoremap dB diB
+
+nnoremap v" vi"
+nnoremap y" yi"
+nnoremap c" ci"
+nnoremap d" di"
+
+nnoremap v' vi'
+nnoremap y' yi'
+nnoremap c' ci'
+nnoremap d' di'
+
+nnoremap n nzz
+nnoremap N Nzz
+
+nnoremap > >>
+nnoremap < <<
+
+nnoremap Y y$
+
+"" -- VISUAL MODE --
+vnoremap > >gv
+vnoremap < <gv
+
+"" -- VISUAL MODE + NORMAL MODE --
+noremap H ^
+noremap L $
+
+noremap + <C-a>
+noremap <leader>+ g<C-a>
+noremap - <C-x>
+"" -- INSERT MODE --
+inoremap <C-k> <C-o>D<Right>
+inoremap jj <ESC>
+
+"" -- IDEA ACTION --
+" Debug
+map <leader>d <Action>(Debug)
+map <leader>w <Action>(Debugger.AddToWatch)
+map <leader>c <Action>(Stop)
+map <leader>b <Action>(ToggleLineBreakpoint)
+
+" Window
+map <leader><Right> <Action>(MoveTabRight)
+map <leader><Left> <Action>(MoveEditorToOppositeTabGroup)
+map <leader><Down> <Action>(SplitHorizontally)
+map <leader>x <Action>(CloseContent)
+map <leader>X <Action>(ReopenClosedTab)
+
+" FORMAT
+map <leader>r <Action>(ReformatCode)
+
+" FIND ERROR
+map <leader>j <Action>(GotoNextError)
+map <leader>k <Action>(GotoPreviousError)
+
+" FIND FILE & ACTION
+map <leader>f <Action>(FindInPath)
+map <leader>a <Action>(GotoAction)
+map <leader>n <Action>(GotoFile)

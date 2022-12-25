@@ -1,0 +1,156 @@
+{
+    "tabnine.experimentalAutoImports": true,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "editor.fontSize": 16,
+    "vim.handleKeys": {
+        "<C-d>": false,
+        "<C-a>": false,
+        "<C-c>": false,
+        "<C-x>": false,
+        "<C-f>": false,
+        "<C-h>": false,
+        "<C-s>": false,
+        "<C-z>": false,
+        "<C-v>": false,
+        "<C-.>": false,
+        "<C-y>": false
+    },
+    "editor.lineNumbers": "on",
+    "liveServer.settings.donotShowInfoMsg": true,
+    "workbench.colorTheme": "Visual Studio Dark",
+    "vim.leader": "<space>",
+    "vim.easymotion": true,
+    "vim.surround": true,
+    "vim.commandLineModeKeyBindings": [],
+    "vim.normalModeKeyBindings": [
+        {
+            "before": ["v","w"],
+            "after":  ["v","i","w"]
+        },
+        {
+            "before": ["c","w"],
+            "after":  ["c","i","w"]
+        },
+        {
+            "before": ["d","w"],
+            "after":  ["d","i","w"]
+        },
+        {
+            "before": ["y","w"],
+            "after":  ["y","i","w"]
+        },
+        {
+            "before": ["v","b"],
+            "after":  ["v","i","b"]
+        },
+        {
+            "before": ["c","b"],
+            "after":  ["c","i","b"]
+        },
+        {
+            "before": ["d","b"],
+            "after":  ["d","i","b"]
+        },
+        {
+            "before": ["y","b"],
+            "after":  ["y","i","b"]
+        },
+        {
+            "before": ["v","B"],
+            "after":  ["v","i","B"]
+        },
+        {
+            "before": ["c","B"],
+            "after":  ["c","i","B"]
+        },
+        {
+            "before": ["d","B"],
+            "after":  ["d","i","B"]
+        },
+        {
+            "before": ["y","B"],
+            "after":  ["y","i","B"]
+        },
+        {
+            "before": ["v","\""],
+            "after":  ["v","i","\""]
+        },
+        {
+            "before": ["c","\""],
+            "after":  ["c","i","\""]
+        },
+        {
+            "before": ["d","\""],
+            "after":  ["d","i","\""]
+        },
+        {
+            "before": ["y","\""],
+            "after":  ["y","i","\""]
+        },
+        {
+            "before": ["v","'"],
+            "after":  ["v","i","'"]
+        },
+        {
+            "before": ["c","'"],
+            "after":  ["c","i","'"]
+        },
+        {
+            "before": ["d","'"],
+            "after":  ["d","i","'"]
+        },
+        {
+            "before": ["y","'"],
+            "after":  ["y","i","'"]
+        },
+        {
+            "before": ["H"],
+            "after":  ["^"]
+        },
+        {
+            "before": ["L"],
+            "after":  ["$"]
+        },
+        {
+            "before": ["n"],
+            "after":  ["n","z","z"]
+        },
+        {
+            "before": ["N"],
+            "after":  ["N","z","z"]
+        },
+        {
+            "before": [">"],
+            "after":  [">",">"]
+        },
+        {
+            "before": ["<"],
+            "after":  ["<","<"]
+        }
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": ["H"],
+            "after":  ["^"]
+        },
+        {
+            "before": ["L"],
+            "after":  ["$"]
+        },
+        {
+            "before": [">"],
+            "after":  [">","g","v"]
+        },
+        {
+            "before": ["<"],
+            "after":  ["<","g","v"]
+        }
+    ],
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["j","j"],
+            "after":  ["<Esc>"]
+        }
+    ]
+}
