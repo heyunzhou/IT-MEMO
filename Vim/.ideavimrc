@@ -13,7 +13,6 @@ nmap <Esc><Esc> :nohl<CR>
 set ignorecase
 set smartcase
 
-
 " Don't use Ex mode, use Q for formatting.
 map Q gq
 
@@ -28,9 +27,6 @@ set easymotion
 nmap f <Plug>(easymotion-s2)
 
 "" -- NORMAL MODE --
-nnoremap J 5j
-nnoremap K 5k
-nnoremap gj J
 
 " motion full method
 nnoremap vm vaBV
@@ -85,11 +81,17 @@ noremap L $
 noremap + <C-a>
 noremap <leader>+ g<C-a>
 noremap - <C-x>
+
+noremap J 5j
+noremap K 5k
+noremap gj J
 "" -- INSERT MODE --
 inoremap <C-k> <C-o>D<Right>
 inoremap jj <ESC>
+" auto format
+inoremap <CR> <C-o>gq<CR><C-o>$<CR>
 
-"" -- IDEA ACTION --
+"" -- IDEA ACTION -
 " Debug
 map <leader>d <Action>(Debug)
 map <leader>w <Action>(Debugger.AddToWatch)
@@ -102,9 +104,14 @@ map <leader><Left> <Action>(MoveEditorToOppositeTabGroup)
 map <leader><Down> <Action>(SplitHorizontally)
 map <leader>x <Action>(CloseContent)
 map <leader>X <Action>(ReopenClosedTab)
+map <leader>co <Action>(CloseAllEditorsButActive)
+map <leader>ca <Action>(CloseAllEditors)
+map <leader>o <Action>(SelectInProjectView)
+map <leader>e <Action>(RecentLocations)
 
 " FORMAT
-map <leader>r <Action>(ReformatCode)
+map <leader><leader> <Action>(ReformatCode)
+map <leader>r <Action>(RenameFile)
 
 " FIND ERROR
 map <leader>j <Action>(GotoNextError)
