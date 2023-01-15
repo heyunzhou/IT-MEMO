@@ -4,7 +4,7 @@ let mapleader=" "
 " Show a few lines of context around the cursor. Note that this makes the
 " text scroll if you mouse-click near the start or end of the window.
 set scrolloff=5
-map <leader>9 <Action>(IdeaVim.ReloadVimRc.reload)
+map <leader>9  :action IdeaVim.ReloadVimRc.reload<CR>
 
 "" -- SEARCHING --
 set incsearch
@@ -88,36 +88,46 @@ noremap gj J
 "" -- INSERT MODE --
 inoremap <C-k> <C-o>D<Right>
 inoremap jj <ESC>
+inoremap 88 <C-o>^
+inoremap 99 <C-o>$
+inoremap <A-j> <Down>
+inoremap <A-k> <Up>
+inoremap <A-h> <Left>
+inoremap <A-l> <Right>
+inoremap @@ :action EditorCompleteStatement<CR>
+
 " auto format
 inoremap <CR> <C-o>gq<CR><C-o>$<CR>
 
 "" -- IDEA ACTION -
 " Debug
-map <leader>d <Action>(Debug)
-map <leader>w <Action>(Debugger.AddToWatch)
-map <leader>c <Action>(Stop)
-map <leader>b <Action>(ToggleLineBreakpoint)
+map <leader>d :action Debug<CR>
+map <leader>w :action Debugger.AddToWatch<CR>
+map <leader>c :action Stop<CR>
+map <leader>b :action ToggleLineBreakpoint<CR>
 
 " Window
-map <leader><Right> <Action>(MoveTabRight)
-map <leader><Left> <Action>(MoveEditorToOppositeTabGroup)
-map <leader><Down> <Action>(SplitHorizontally)
-map <leader>x <Action>(CloseContent)
-map <leader>X <Action>(ReopenClosedTab)
-map <leader>co <Action>(CloseAllEditorsButActive)
-map <leader>ca <Action>(CloseAllEditors)
-map <leader>o <Action>(SelectInProjectView)
-map <leader>e <Action>(RecentLocations)
+map <leader><Right> :action MoveTabRight<CR>
+map <leader><Left> :action MoveEditorToOppositeTabGroup<CR>
+map <leader><Down> :action SplitHorizontally<CR>
+map <leader>x :action CloseContent<CR>
+map <leader>X :action ReopenClosedTab<CR>
+map <leader>co :action CloseAllEditorsButActive<CR>
+map <leader>ca :action CloseAllEditors<CR>
+map <leader>o :action SelectInProjectView<CR>
+map <leader>e :action RecentLocations<CR>
 
 " FORMAT
-map <leader><leader> <Action>(ReformatCode)
-map <leader>r <Action>(RenameFile)
+map <leader><leader> :action ReformatCode<CR>
+map <leader>r :action RenameFile<CR>
 
 " FIND ERROR
-map <leader>j <Action>(GotoNextError)
-map <leader>k <Action>(GotoPreviousError)
+map <leader>j :action GotoNextError<CR>
+map <leader>k :action GotoPreviousError<CR>
 
 " FIND FILE & ACTION
-map <leader>f <Action>(FindInPath)
-map <leader>a <Action>(GotoAction)
-map <leader>n <Action>(GotoFile)
+map <leader>f :action FindInPath<CR>
+map <leader>a :action GotoAction<CR>
+map <leader>n :action GotoFile<CR>
+
+map <leader>ju :action GotoTest<CR>
