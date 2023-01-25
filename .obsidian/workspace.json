@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "63aab1ea7a4641e9",
+        "id": "60429dd4ca90ec89",
         "type": "tabs",
         "children": [
           {
-            "id": "dc3ab0667e797092",
+            "id": "fe92b9c201aab117",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Java8以後.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Java8以後.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Java8以後.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Java8以後.md"
+              }
             }
           }
         ],
@@ -138,10 +146,10 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "dc3ab0667e797092",
+  "active": "fe92b9c201aab117",
   "lastOpenFiles": [
+    "Java8以後.md",
     "Grep.md",
-    "Java8.md",
     "DOC-VBA.md",
     "Mockito.md",
     "DOC-Shell.md",
