@@ -95,6 +95,9 @@ inoremap <A-k> <Up>
 inoremap <A-h> <Left>
 inoremap <A-l> <Right>
 inoremap @@ :action EditorCompleteStatement<CR>
+inoremap <A-v> :action IntroduceVariable<CR>
+inoremap <A-c> :action IntroduceConstant<CR>
+inoremap <A-f> :action IntroduceField<CR>
 
 " auto format
 inoremap <CR> <C-o>gq<CR><C-o>$<CR>
@@ -120,10 +123,6 @@ map <leader>e :action RecentLocations<CR>
 " FORMAT
 map <leader>rf :action ReformatCode<CR>
 map <leader>rn :action RenameFile<CR>
-
-" FIND ERROR
-map <A-e> :action GotoNextError<CR>
-map <A-S-e> :action GotoPreviousError<CR>
 
 " FIND FILE & ACTION
 map <A-f> :action FindInPath<CR>
