@@ -121,7 +121,7 @@ map <leader>o :action SelectInProjectView<CR>
 map <leader>e :action RecentLocations<CR>
 
 " FORMAT
-map <leader>rf :action ReformatCode<CR>
+map @@ :action ReformatCode<CR>
 map <leader>rn :action RenameFile<CR>
 
 " FIND FILE & ACTION
