@@ -117,7 +117,7 @@ map <leader>x :action CloseContent<CR>
 map <leader>X :action ReopenClosedTab<CR>
 map <leader>co :action CloseAllEditorsButActive<CR>
 map <leader>ca :action CloseAllEditors<CR>
-map <leader>o :action SelectInProjectView<CR>
+map <leader>sp :action SelectInProjectView<CR>
 map <leader>e :action RecentLocations<CR>
 
 " FORMAT
@@ -130,8 +130,13 @@ map <A-r> :action ReplaceInPath<CR>
 map ga :action GotoAction<CR>
 map gf :action GotoFile<CR>
 map gt :action GotoTest<CR>
+map ge :action Generate<CR>
 
-map <leader>gen :action Generate<CR>
-map <leader>[ :action SurroundWith<CR>
+map <leader>sw :action SurroundWith<CR>
 map <leader>nc :action NewClass<CR>
 map <leader>nd :action NewDir<CR>
+
+" alt+F7 FindUsages
+map <leader>ch :action CallHierarchy<CR>
+map <leader>gh :action Vcs.ShowTabbedFileHistory<CR>
+map <leader>oe :action RevealIn<CR>
