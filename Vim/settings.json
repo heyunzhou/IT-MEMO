@@ -152,5 +152,9 @@
             "before": ["j","j"],
             "after":  ["<Esc>"]
         }
-    ]
+    ],
+    "Codegeex.Privacy": false,
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    }
 }

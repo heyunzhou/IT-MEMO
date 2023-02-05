@@ -3,114 +3,146 @@ let mapleader=" "
 "" -- Suggested options --
 " Show a few lines of context around the cursor. Note that this makes the
 " text scroll if you mouse-click near the start or end of the window.
-set scrolloff=5
 map <leader>9  :action IdeaVim.ReloadVimRc.reload<CR>
 
-"" -- SEARCHING --
+"" -- Vim Setting --
+set scrolloff=5
 set incsearch
 set hlsearch
-nmap <Esc><Esc> :nohl<CR>
+nmap <leader>sc :noh<CR>
 set ignorecase
 set smartcase
 
 " Don't use Ex mode, use Q for formatting.
 map Q gq
 
-"" -- VIM PLUGINS --
-set surround
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" -- VIM PLUGINS -- """""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set ideajoin
 set highlightedyank
-set multiple-cursors
+
+" PLUGIN
 set ReplaceWithRegister
+" gr doPaste
+
+"" PLUGIN
 set exchange
+" X   Visual mode.On the first use, define the first {motion} to exchange. On the second use, define the second {motion} and perform the exchange.
+" cxc Clear any {motion} pending for exchange.
+
+"" PLUGIN
+set surround
+vmap " S"
+vmap ' S'
+vmap ( S(
+" cs + old + new
+" ds + tags
+" vMode: S + tags
+
+"" PLUGIN
 set easymotion
 nmap f <Plug>(easymotion-s2)
+" <leader><leader> k jump up lines
+" <leader><leader> j jump down lines
 
+"" PLUGIN
+set NERDTree
+" Key	Description
+" o		Open files, directories and bookmarks
+" i		Open selected file in a split window
+" s		Open selected file in a new vsplit
+" x		Close the current nodes parent
+" X		Recursively close all children of the current node
+" P		Jump to the root node
+" p		Jump to current nodes parent
+" r		Recursively refresh the current directory
+" m		Display the NERDTree menu
+" q		Close the NERDTree window
+" A		Zoom (maximize/minimize) the NERDTree window
+
+"" PLUGIN
+set commentary
+" gcc switch comment
+" gcu uncomment out all
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" -- Basic Mapping -- """""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" -- NORMAL MODE --
+nmap <A-p> "0p
+nmap vv <C-v>
 
-" motion full method
-nnoremap vm vaBV
-nnoremap dm vaBVd
-nnoremap cm vaBVc
-nnoremap ym vaBVy
+nmap vw viw
+nmap yw yiw
+nmap cw ciw
+nmap dw diw
 
-nnoremap <A-p> "0p
-nnoremap vv <C-v>
+nmap vb vib
+nmap yb yib
+nmap cb cib
+nmap db dib
 
-nnoremap vw viw
-nnoremap yw yiw
-nnoremap cw ciw
-nnoremap dw diw
+nmap vB viB
+nmap yB yiB
+nmap cB ciB
+nmap dB diB
 
-nnoremap vb vib
-nnoremap yb yib
-nnoremap cb cib
-nnoremap db dib
+nmap v" vi"
+nmap y" yi"
+nmap c" ci"
+nmap d" di"
 
-nnoremap vB viB
-nnoremap yB yiB
-nnoremap cB ciB
-nnoremap dB diB
+nmap v' vi'
+nmap y' yi'
+nmap c' ci'
+nmap d' di'
 
-nnoremap v" vi"
-nnoremap y" yi"
-nnoremap c" ci"
-nnoremap d" di"
+nmap n nzz
+nmap N Nzz
 
-nnoremap v' vi'
-nnoremap y' yi'
-nnoremap c' ci'
-nnoremap d' di'
+nmap > >>
+nmap < <<
 
-nnoremap n nzz
-nnoremap N Nzz
-
-nnoremap > >>
-nnoremap < <<
-
-nnoremap Y y$
+nmap Y y$
 
 "" -- VISUAL MODE --
-vnoremap > >gv
-vnoremap < <gv
+vmap > >gv
+vmap < <gv
+
 
 "" -- VISUAL MODE + NORMAL MODE --
-noremap H ^
-noremap L $
+map H ^
+map L $
 
-noremap + <C-a>
-noremap <leader>+ g<C-a>
-noremap - <C-x>
+nmap + <C-a>
+vmap + g<C-a>
+map - <C-x>
+vmap - g<C-x>
 
-noremap J 5j
-noremap K 5k
-noremap gj J
+map J 5j
+map K 5k
+map gj J
 "" -- INSERT MODE --
-inoremap <C-k> <C-o>D<Right>
-inoremap jj <ESC>
-inoremap 88 <C-o>^
-inoremap 99 <C-o>$
-inoremap <A-j> <Down>
-inoremap <A-k> <Up>
-inoremap <A-h> <Left>
-inoremap <A-l> <Right>
-inoremap @@ :action EditorCompleteStatement<CR>
-inoremap <A-v> :action IntroduceVariable<CR>
-inoremap <A-c> :action IntroduceConstant<CR>
-inoremap <A-f> :action IntroduceField<CR>
+imap <C-k> <C-o>D<Right>
+imap jj <ESC>
+imap @@ :action EditorCompleteStatement<CR>
 
-" auto format
-inoremap <CR> <C-o>gq<CR><C-o>$<CR>
-
-"" -- IDEA ACTION -
-" Debug
-map <leader>d :action Debug<CR>
-map <leader>s :action Stop<CR>
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" -- IDEA ACTION -- """""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" DEBUG
 map <leader>w :action Debugger.AddToWatch<CR>
 map <leader>b :action ToggleLineBreakpoint<CR>
+map <leader>B :action Debugger.RemoveAllBreakpoints<CR>
+" A-S-f10 run window
+" C-S-f10 run class
+" S-f10 run
+" S-f9 debug
+" C-f2 stop
 
-" Window
-map <leader><Right> :action MoveTabRight<CR>
+" WINDOW
+map <leader><Right> :action SplitVertically<CR>
 map <leader><Left> :action MoveEditorToOppositeTabGroup<CR>
 map <leader><Down> :action SplitHorizontally<CR>
 map <leader>x :action CloseContent<CR>
@@ -120,17 +152,40 @@ map <leader>ca :action CloseAllEditors<CR>
 map <leader>sp :action SelectInProjectView<CR>
 map <leader>e :action RecentLocations<CR>
 
-" FORMAT
+" MULTIPLE-CURSORS
+map <A-n> :action SelectNextOccurrence<CR>
+imap <A-n> :action SelectNextOccurrence<CR>
+map <A-x> :action UnselectPreviousOccurrence<CR>
+imap <A-x> :action UnselectPreviousOccurrence<CR>
+map <A-w> :action SelectAllOccurrences<CR>
+imap <A-w> :action SelectAllOccurrences<CR>
+" F3 move to next occurrence
+" S-F3 move to previous occurrence
+
+" REFACTOR
 map @@ :action ReformatCode<CR>
-map <leader>rn :action RenameFile<CR>
+map mf :action RenameFile<CR>
+map me :action RenameElement<CR>
+map ms :action ChangeSignature<CR>
+map mc :action IntroduceConstant<CR>
+map mf :action IntroduceField<CR>
+map mp :action IntroduceParameter<CR>
+imap <A-q> :action IntroduceVariable<CR>
+
 
 " FIND FILE & ACTION
 map <A-f> :action FindInPath<CR>
+imap <A-f> :action FindInPath<CR>
 map <A-r> :action ReplaceInPath<CR>
-map ga :action GotoAction<CR>
-map gf :action GotoFile<CR>
-map gt :action GotoTest<CR>
-map ge :action Generate<CR>
+imap <A-r> :action ReplaceInPath<CR>
+map <A-a> :action GotoAction<CR>
+imap <A-a> :action GotoAction<CR>
+map <A-e> :action GotoFile<CR>
+imap <A-e> :action GotoFile<CR>
+map <A-g> :action Generate<CR>
+imap <A-g> :action Generate<CR>
+map <A-t> :action GotoTest<CR>
+imap <A-t> :action GotoTest<CR>
 
 map <leader>sw :action SurroundWith<CR>
 map <leader>nc :action NewClass<CR>
@@ -140,3 +195,7 @@ map <leader>nd :action NewDir<CR>
 map <leader>ch :action CallHierarchy<CR>
 map <leader>gh :action Vcs.ShowTabbedFileHistory<CR>
 map <leader>oe :action RevealIn<CR>
+
+" Macros
+map vm @m
+let @m =']MV%' " select method
