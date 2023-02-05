@@ -190,6 +190,7 @@ imap <A-t> :action GotoTest<CR>
 map <leader>sw :action SurroundWith<CR>
 map <leader>nc :action NewClass<CR>
 map <leader>nd :action NewDir<CR>
+map <leader>nf :action NewFile<CR>
 
 " alt+F7 FindUsages
 map <leader>ch :action CallHierarchy<CR>
