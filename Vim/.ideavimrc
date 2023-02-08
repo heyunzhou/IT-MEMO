@@ -35,7 +35,6 @@ set exchange
 set surround
 vmap " S"
 vmap ' S'
-vmap ( S(
 " cs + old + new
 " ds + tags
 " vMode: S + tags
@@ -65,6 +64,10 @@ set NERDTree
 set commentary
 " gcc switch comment
 " gcu uncomment out all
+
+" method comment
+map <A-/> i/**<CR>
+imap <A-/> /**<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " -- Basic Mapping -- """""""""""""""""""""""""""""""""""""""""""
@@ -116,7 +119,6 @@ nmap Y y$
 vmap > >gv
 vmap < <gv
 
-
 "" -- VISUAL MODE + NORMAL MODE --
 map H ^
 map L $
@@ -155,7 +157,8 @@ map <leader>x :action CloseContent<CR>
 map <leader>X :action ReopenClosedTab<CR>
 map <leader>co :action CloseAllEditorsButActive<CR>
 map <leader>ca :action CloseAllEditors<CR>
-map <leader>sp :action SelectInProjectView<CR>
+map <leader>os :action SelectInProjectView<CR>
+map <leader>oe :action RevealIn<CR>
 map <leader>e :action RecentLocations<CR>
 
 " MULTIPLE-CURSORS
@@ -170,13 +173,18 @@ imap <A-w> :action SelectAllOccurrences<CR>
 
 " REFACTOR
 map @@ :action ReformatCode<CR>
-map mf :action RenameFile<CR>
+map mn :action RenameFile<CR>
 map me :action RenameElement<CR>
 map ms :action ChangeSignature<CR>
 map mc :action IntroduceConstant<CR>
 map mf :action IntroduceField<CR>
 map mp :action IntroduceParameter<CR>
+map <A-q> :action IntroduceVariable<CR>
 imap <A-q> :action IntroduceVariable<CR>
+map <A-g> :action Generate<CR>
+imap <A-g> :action Generate<CR>
+map <A-s> :action SurroundWith<CR>
+imap <A-s> :action SurroundWith<CR>
 
 
 " FIND FILE & ACTION
@@ -188,12 +196,11 @@ map <A-a> :action GotoAction<CR>
 imap <A-a> :action GotoAction<CR>
 map <A-e> :action GotoFile<CR>
 imap <A-e> :action GotoFile<CR>
-map <A-g> :action Generate<CR>
-imap <A-g> :action Generate<CR>
 map <A-t> :action GotoTest<CR>
 imap <A-t> :action GotoTest<CR>
+map <A-c> :action GotoClass<CR>
+imap <A-c> :action GotoClass<CR>
 
-map <leader>sw :action SurroundWith<CR>
 map <leader>nc :action NewClass<CR>
 map <leader>nd :action NewDir<CR>
 map <leader>nf :action NewFile<CR>
@@ -201,8 +208,10 @@ map <leader>nf :action NewFile<CR>
 " alt+F7 FindUsages
 map <leader>ch :action CallHierarchy<CR>
 map <leader>gh :action Vcs.ShowTabbedFileHistory<CR>
-map <leader>oe :action RevealIn<CR>
+map <leader>gH :action Vcs.ShowHistoryForBlock<CR>
+map <leader>cn :action CopyFileName<CR>
+map <leader>cr :action CopyReference<CR>
 
 " Macros
 map vm @m
-let @m =']MV%' " select method
+let @m =']MV%(' " select method
