@@ -12,7 +12,7 @@ set hlsearch
 nmap <leader>sc :noh<CR>
 set ignorecase
 set smartcase
-
+set clipboard+=unnamed  " use the clipboards of vim and win
 " Don't use Ex mode, use Q for formatting.
 map Q gq
 
@@ -74,12 +74,17 @@ imap <A-/> /**<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" -- FOLD --
 " zc fold
+" C-> toggle fold
 " zo open
 " zM fold all
 " zR open all
+map zm zM
+map zr zR
 
 "" -- NORMAL MODE --
-nmap <A-p> "0p
+nmap <leader>p "0p
+nmap <A-p> vwp
+nmap <C-p> Vp
 nmap vv <C-v>
 
 nmap vw viw
