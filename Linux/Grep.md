@@ -1,4 +1,12 @@
-## オプション
+## 基本
+
+### 文法
+
+```shell
+grep [options] search_string path/to/file
+```
+
+### オプション
 
 | option | 意味                         |
 | ------ | -------------------------- |
@@ -67,31 +75,20 @@ Output control:
   -Z, --null                print 0 byte after FILE name
 ```
 
-## 使い方
-
-### 文法
-
+## スニペット
+### 複数キー検索
 ```shell
-grep [options] search_string path/to/file
+# OR条件
+grep –E 'pattern1|pattern2' file
+# AND条件
+grep pattern file | grep key2
 ```
 
-### 行検索（複数キーOR）
-
-```shell
-grep –E 'key1|key2' file
-```
-
-### 行検索（複数キーAND）
-
-```shell
-grep key1 file | grep key2
-```
-
-### ファイル検索（複数キーAND）
-
+### フォルダ内検索
 ```shell
 # 拡張子指定
-grep --include=\*.sql -rlE key1 Folder | xargs grep -l key2
-# フォルダを除外
-grep --exclude-dir={folder1,folder2} -rlE key1 Folder | xargs grep -l key2
+grep --include=*.* -rlE pattern1 folder
+grep --exclude=*.txt -rlE pattern folder
+# 複数キー検索
+grep --include=*.txt -rlE pattern folder | xargs grep -l parttern2
 ```

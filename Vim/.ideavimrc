@@ -1,11 +1,8 @@
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" VIM Setting
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " https://github.com/JetBrains/ideavim
 let mapleader=" "
-"" -- Suggested options --
-" Show a few lines of context around the cursor. Note that this makes the
-" text scroll if you mouse-click near the start or end of the window.
-map <leader>9  :action IdeaVim.ReloadVimRc.reload<CR>
-
-"" -- Vim Setting --
 set scrolloff=5
 set incsearch
 set hlsearch
@@ -15,14 +12,15 @@ set smartcase
 set clipboard+=unnamed  " use the clipboards of vim and win
 " Don't use Ex mode, use Q for formatting.
 map Q gq
+map <leader>9  :action IdeaVim.ReloadVimRc.reload<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" -- VIM PLUGINS -- """""""""""""""""""""""""""""""""""""""""""""
+" VIM PLUGINS
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set ideajoin
 set highlightedyank
 
-" PLUGIN
+"" PLUGIN
 set ReplaceWithRegister
 " gr doPaste
 
@@ -41,7 +39,7 @@ vmap ' S'
 
 "" PLUGIN
 set easymotion
-nmap f <Plug>(easymotion-s2)
+map f <Plug>(easymotion-s2)
 " <leader><leader> k jump up lines
 " <leader><leader> j jump down lines
 
@@ -70,7 +68,7 @@ map <A-/> i/**<CR>
 imap <A-/> /**<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" -- Basic Mapping -- """""""""""""""""""""""""""""""""""""""""""
+" Basic Mapping
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" -- FOLD --
 " zc fold
@@ -80,6 +78,10 @@ imap <A-/> /**<CR>
 " zR open all
 map zm zM
 map zr zR
+
+"" -- REPLACE --
+nmap <leader>r yw:%s/<C-r>0/
+vmap <leader>r :s/<C-r>0/
 
 "" -- NORMAL MODE --
 nmap <leader>p "0p
@@ -115,16 +117,13 @@ nmap d' di'
 nmap n nzz
 nmap N Nzz
 
+nmap Y y$
+"" -- Change Indent --
 nmap > >>
 nmap < <<
-
-nmap Y y$
-
-"" -- VISUAL MODE --
 vmap > >gv
 vmap < <gv
 
-"" -- VISUAL MODE + NORMAL MODE --
 map H ^
 map L $
 
@@ -139,10 +138,9 @@ map gj J
 "" -- INSERT MODE --
 imap <C-k> <C-o>D<Right>
 imap jj <ESC>
-imap @@ :action EditorCompleteStatement<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" -- IDEA ACTION -- """""""""""""""""""""""""""""""""""""""""""
+" IDEA ACTION
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " DEBUG
 map <leader>w :action Debugger.AddToWatch<CR>

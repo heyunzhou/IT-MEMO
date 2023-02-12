@@ -1,4 +1,4 @@
-## Lambda
+# Lambda
 ```java
 // 例１
 list.forEach(n -> System.out.println(n));
@@ -155,7 +155,53 @@ optional.filter(predicate);
 ```
 
 ## Stream
+### Intermediate Operations
+#### filter
+#### map
+#### flatMap
+#### distinct
+#### sorted
+#### peek
+#### limit
+#### skip
+#### takeWhile
+#### dropWhile
+
+### Terminal Operations
+#### forEach
+#### forEachOrdered
+#### toArray
+#### reduce
+#### min
+#### max
+#### count
+#### anyMatch
+#### allMatch
+#### noneMatch
+#### findFirst
+#### findAny
+#### collect
 
 ## LocalDateAPI
+
+## TextBlocks
+```java
+// break long line whith back slash
+String str = """
+			this\
+			is\
+			one line
+""";
+
+// a good way to use variables
+String str = """
+		hello john, %s 
+		""".formatted(message);
+
+// some times maybe need this
+String str = """  
+        hello john, $message
+        """.replace("$message", "how are you");
+```
 
 

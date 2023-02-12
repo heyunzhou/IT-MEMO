@@ -1,5 +1,9 @@
 ## Shell
 
+参考資料：
+https://wangchujiang.com/linux-command/c/sed.html
+
+## Basic Syntax
 ### if文
 
 ```shell
@@ -58,6 +62,7 @@ arr=(`find . -name fName`)
  echo ${arr[@]:0:3}
 ```
 
+## Commands
 ### head | tail
 
 ```shell
@@ -75,10 +80,14 @@ tail -20 notes.log
 ```
 
 ### grep
-
+[[Grep]]詳細
 ```shell
 #検索したい文字を含む行を取得
 grep "string" *.txt
+#行数を表示
+grep -n "string" *.txt
+#ファイル名のみ表示
+grep -n "string" *.txt
 #検索したい文字を含まない行を取得
 grep -V "string" *.txt
 #正規表現を使用
@@ -204,7 +213,7 @@ cat file | sort -t: -k1 -r
 | ヘルプ | h, H             | ヘルプを表示します。                                         |
 | 終了   | q, Q, :q, :Q, ZZ | 終了します。                                                 |
 
-### 権限
+### chmod
 
 ```shell
 #権限を変更
@@ -220,6 +229,26 @@ chmod 777 file
 ```
 
 ※参照：https://blog.csdn.net/u013197629/article/details/73608613
+
+### chown
+```shell
+## ファイルの所有者やグループを変更するコマンド
+## option
+-c或——changes：效果类似“-v”参数，但仅回报更改的部分；
+-f或--quite或——silent：不显示错误信息；
+-h或--no-dereference：只对符号连接的文件作修改，而不更改其他任何相关文件；
+-R或——recursive：递归处理，将指定目录下的所有文件及子目录一并处理；
+-v或——version：显示指令执行过程；
+--dereference：效果和“-h”参数相同；
+--help：在线帮助；
+--reference=<参考文件或目录>：把指定文件或目录的拥有者与所属群组全部设成和参考文件或目录的拥有者与所属群组相同；
+--version：显示版本信息。
+
+## example 
+-rw-r--r-- 1 karuma karuma 0 May 10 06:46 file
+chown root:root file
+-rw-r--r-- 1 root root 0 May 10 06:46 file
+```
 
 ### その他
 
@@ -243,6 +272,7 @@ free
 find . -type f -print0 | xargs -0 dos2unix
 ```
 
+## Other
 ### 並行処理
 
 ```shell

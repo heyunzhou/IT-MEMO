@@ -1,5 +1,6 @@
 function! myspacevim#before() abort
     let g:highlightedyank_highlight_duration = 200
+    nmap m1 :%s/<C-R><C-W>/<C-R>0/g<CR>
     imap jj <esc>
     imap <C-k> <C-o>D<Right>
     "" -- NORMAL MODE --
