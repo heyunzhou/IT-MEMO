@@ -188,6 +188,8 @@ map <A-g> :action Generate<CR>
 imap <A-g> :action Generate<CR>
 map <A-s> :action SurroundWith<CR>
 imap <A-s> :action SurroundWith<CR>
+map <A-i> :action Inline<CR>
+imap <A-i> :action Inline<CR>
 
 
 " FIND FILE & ACTION
