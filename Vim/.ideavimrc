@@ -9,6 +9,9 @@ set hlsearch
 nmap <leader>sc :noh<CR>
 set ignorecase
 set smartcase
+" ColorScheme>General>line number on caret row=DC2965
+set number
+set relativenumber
 set clipboard+=unnamed  " use the clipboards of vim and win
 " Don't use Ex mode, use Q for formatting.
 map Q gq
@@ -134,10 +137,17 @@ vmap - g<C-x>
 
 map J 5j
 map K 5k
-map gj J
 "" -- INSERT MODE --
 imap <C-k> <C-o>D<Right>
 imap jj <ESC>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Japanese
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+imap ｊｊ <ESC>
+map お o
+map い i
+map あ a
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " IDEA ACTION
@@ -146,10 +156,10 @@ imap jj <ESC>
 map <leader>w :action Debugger.AddToWatch<CR>
 map <leader>b :action ToggleLineBreakpoint<CR>
 map <leader>B :action Debugger.RemoveAllBreakpoints<CR>
-" A-S-f10 run window
-" C-S-f10 run class
-" S-f10 run
 " S-f9 debug
+" S-f10 run
+" C-S-f10 run class
+" A-S-f10 run window
 " C-f2 stop
 
 " WINDOW
@@ -175,7 +185,8 @@ imap <A-w> :action SelectAllOccurrences<CR>
 " S-F3 move to previous occurrence
 
 " REFACTOR
-map @@ :action ReformatCode<CR>
+map <C-l> :action ReformatCode<CR>
+imap <C-l> :action ReformatCode<CR>
 map mn :action RenameFile<CR>
 map me :action RenameElement<CR>
 map ms :action ChangeSignature<CR>
