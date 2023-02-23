@@ -123,8 +123,8 @@ vmap <leader>r :s/<C-r>0/
 
 "" -- NORMAL MODE --
 nmap <leader>p "0p
-nmap <A-p> vwp
-nmap <C-p> Vp
+nmap <A-p> vwgr
+nmap <C-p> Vgr
 nmap vv <C-v>
 
 nmap vw viw
