@@ -1,4 +1,38 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Set Handlers
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+sethandler <S-Tab> a:vim
+sethandler <C-A> a:ide
+sethandler <C-B> a:ide
+sethandler <C-C> a:ide
+sethandler <C-D> a:ide
+sethandler <C-E> a:ide
+sethandler <C-F> a:ide
+sethandler <C-G> a:ide
+sethandler <C-H> a:vim
+sethandler <C-I> a:ide
+sethandler <C-J> a:ide
+sethandler <C-K> a:vim
+sethandler <C-L> a:vim
+sethandler <C-M> a:vim
+sethandler <C-M> a:vim
+sethandler <C-O> a:vim
+sethandler <C-P> a:vim
+sethandler <C-Q> a:ide
+sethandler <A-Q> a:vim
+sethandler <C-R> a:ide
+sethandler <C-S> a:ide
+sethandler <C-T> a:vim
+sethandler <C-U> a:vim
+sethandler <C-V> a:ide
+sethandler <C-W> a:vim
+sethandler <C-X> a:ide
+sethandler <C-Y> a:vim
+sethandler <C-[> a:ide
+sethandler <C-\> a:vim
+sethandler <C-]> a:vim
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " VIM Setting
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " https://github.com/JetBrains/ideavim
@@ -9,20 +43,21 @@ set hlsearch
 nmap <leader>sc :noh<CR>
 set ignorecase
 set smartcase
+set showcmd
+set showmode
 " ColorScheme>General>line number on caret row=DC2965
+" ColorScheme>General>line number=60778E
 set number
 set relativenumber
 set clipboard+=unnamed  " use the clipboards of vim and win
 " Don't use Ex mode, use Q for formatting.
 map Q gq
 map <leader>9  :action IdeaVim.ReloadVimRc.reload<CR>
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " VIM PLUGINS
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set ideajoin
 set highlightedyank
-
 "" PLUGIN
 set ReplaceWithRegister
 " gr doPaste
@@ -145,6 +180,9 @@ imap jj <ESC>
 " Japanese
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 imap ｊｊ <ESC>
+map ｄｄ dd
+map ｙｙ yy
+map ｃｃ cc
 map お o
 map い i
 map あ a
@@ -174,6 +212,9 @@ map <leader>os :action SelectInProjectView<CR>
 map <leader>oe :action RevealIn<CR>
 map <leader>e :action RecentLocations<CR>
 
+map <Tab> :action NextTab<CR>
+map <S-Tab> :action PreviousTab<CR>
+
 " MULTIPLE-CURSORS
 map <A-n> :action SelectNextOccurrence<CR>
 imap <A-n> :action SelectNextOccurrence<CR>
@@ -185,6 +226,7 @@ imap <A-w> :action SelectAllOccurrences<CR>
 " S-F3 move to previous occurrence
 
 " REFACTOR
+map ; :action EditorDuplicate<CR>
 map <C-l> :action ReformatCode<CR>
 imap <C-l> :action ReformatCode<CR>
 map mn :action RenameFile<CR>
@@ -202,10 +244,15 @@ imap <A-s> :action SurroundWith<CR>
 map <A-i> :action Inline<CR>
 imap <A-i> :action Inline<CR>
 
+map gd :action GotoDeclaration<CR>
+map gs :action GotoSuperMethod<CR>
+map gI :action GotoImplementation<CR>
 
 " FIND FILE & ACTION
 map <A-f> :action FindInPath<CR>
 imap <A-f> :action FindInPath<CR>
+map / :action Find<CR>
+map ? :action Replace<CR>
 map <A-r> :action ReplaceInPath<CR>
 imap <A-r> :action ReplaceInPath<CR>
 map <A-a> :action GotoAction<CR>
@@ -225,9 +272,13 @@ map <leader>nf :action NewFile<CR>
 map <leader>ch :action CallHierarchy<CR>
 map <leader>gh :action Vcs.ShowTabbedFileHistory<CR>
 map <leader>gH :action Vcs.ShowHistoryForBlock<CR>
-map <leader>cn :action CopyFileName<CR>
-map <leader>cr :action CopyReference<CR>
+map <leader>df :action CopyFileName<CR>
+map <leader>dr :action CopyReference<CR>
 
 " Macros
 map vm @m
 let @m =']MV%(' " select method
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" temp
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+map 99 v"<A-e>
