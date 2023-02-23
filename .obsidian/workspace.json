@@ -11,8 +11,12 @@
             "id": "e295a570feb97f9f",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Spring/Mockito.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Spring/Mockito.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Spring/Mockito.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -118,11 +124,13 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Spring/Mockito.md"
+              }
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -138,17 +146,17 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "fb5dd28529954f13",
+  "active": "e295a570feb97f9f",
   "lastOpenFiles": [
+    "Java8以後.md",
+    "Spring/Mockito.md",
+    "Linux/DOC-Shell.md",
     "DOC-VBA.md",
     "TEST.md",
     "www.google.com.md",
     "Linux/Grep.md",
-    "Linux/DOC-Shell.md",
     "DOC-Macro.md",
     "Bookmark.md",
-    "DOC-Mysql.md",
-    "Spring/Validation.md",
-    "Java8以後.md"
+    "DOC-Mysql.md"
   ]
 }
