@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "3223c471b9e4d2d3",
+        "id": "c751ffa76c679cec",
         "type": "tabs",
         "children": [
           {
-            "id": "d2a498519897d568",
+            "id": "7b88d119d38e6404",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Java8以後.md",
-                "mode": "preview",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java8以後.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java8以後.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Java8以後.md"
-              }
+              "state": {}
             }
           }
         ],
@@ -138,16 +130,17 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "canvas:新建白板": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
-      "canvas:Create new canvas": false,
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
       "command-palette:打开命令面板": false
     }
   },
-  "active": "d2a498519897d568",
+  "active": "7b88d119d38e6404",
   "lastOpenFiles": [
+    "Java8以後.md",
     "VBA-Basic.md",
     "VBA-Macro.md",
     "Selenium.md",
@@ -155,7 +148,6 @@
     "Mysql.md",
     "Bookmark.md",
     "CSS.md",
-    "Java8以後.md",
     "Spring/Mockito.md",
     "Linux/DOC-Shell.md"
   ]

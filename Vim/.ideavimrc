@@ -1,4 +1,4 @@
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Set Handlers
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 sethandler <S-Tab> a:vim
@@ -137,8 +137,8 @@ nmap yb yib
 nmap cb cib
 nmap db dib
 
-nmap vB viB
-nmap yB yiB
+nmap vB viBV
+nmap yB viBVy
 nmap cB ciB
 nmap dB diB
 
@@ -212,9 +212,6 @@ map <leader>os :action SelectInProjectView<CR>
 map <leader>oe :action RevealIn<CR>
 map <leader>e :action RecentLocations<CR>
 
-map <Tab> :action NextTab<CR>
-map <S-Tab> :action PreviousTab<CR>
-
 " MULTIPLE-CURSORS
 map <A-n> :action SelectNextOccurrence<CR>
 imap <A-n> :action SelectNextOccurrence<CR>
@@ -243,10 +240,6 @@ map <A-s> :action SurroundWith<CR>
 imap <A-s> :action SurroundWith<CR>
 map <A-i> :action Inline<CR>
 imap <A-i> :action Inline<CR>
-
-map gd :action GotoDeclaration<CR>
-map gs :action GotoSuperMethod<CR>
-map gI :action GotoImplementation<CR>
 
 " FIND FILE & ACTION
 map <A-f> :action FindInPath<CR>

@@ -32,6 +32,7 @@ function! myspacevim#before() abort
     nmap n nzz
     nmap N Nzz
 
+    nmap ; yyp
     map H ^
     map L $
 " set cusor shape
