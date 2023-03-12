@@ -11,7 +11,8 @@ xcopy %userprofile%\.vrapperrc %folder%\.vrapperrc /y
 @REM vscode
 xcopy %userprofile%\AppData\Roaming\Code\User\settings.json %folder%\settings.json /y
 
-@REM spaceVim
-xcopy \\wsl.localhost\Ubuntu-20.04\home\heyunzhou\.SpaceVim.d %folder%\.SpaceVim.d /E /y
+@REM vscode
+xcopy \\wsl.localhost\Ubuntu-20.04\home\hyz\.vimrc %folder%\.vimrc /y
+
 
 pause
