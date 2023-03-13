@@ -9,7 +9,7 @@ Plug 'easymotion/vim-easymotion'
 call plug#end()
 
 let mapleader = " "
-map <leader>e :NERDTreeToggle<CR>
+map <leader-e> :NERDTreeToggle<CR>
 
 let g:tagbar_autofocus = 1
 map <F8> :TagbarToggle<CR>
@@ -33,3 +33,8 @@ set incsearch
 set ignorecase
 set smartcase
 set clipboard=unnamed
+
+"Cursor Setting
+let &t_SI.="\e[5 q" "SI = INSERT mode
+let &t_SR.="\e[4 q" "SR = REPLACE mode
+let &t_EI.="\e[1 q" "EI = NORMAL  mode
