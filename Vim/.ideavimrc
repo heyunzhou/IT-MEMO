@@ -137,8 +137,8 @@ nmap yb yib
 nmap cb cib
 nmap db dib
 
-nmap vB viBV
-nmap yB viBVy
+nmap vB viB
+nmap yB yiB
 nmap cB ciB
 nmap dB diB
 
