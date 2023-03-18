@@ -57,13 +57,10 @@ set clipboard=unnamed
 set timeoutlen=1000 ttimeoutlen=0 " exit visual mode without delay
 
 "Cursor Setting
-set cursorline
-"SI = INSERT mode
-let &t_SI.="\e[6 q"
-"SR = REPLACE mode
-let &t_SR.="\e[3 q"
-"EI = NORMAL  mode
-let &t_EI.="\e[2 q"
+let &t_SI.="\e[6 q" "SI = INSERT mode
+let &t_SR.="\e[3 q" "SR = REPLACE mode
+let &t_EI.="\e[2 q" "EI = NORMAL  mode
+
 "==================================================
 " Key Mapping
 "==================================================
