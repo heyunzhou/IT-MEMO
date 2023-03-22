@@ -248,14 +248,8 @@ map / :action Find<CR>
 map ? :action Replace<CR>
 map <A-r> :action ReplaceInPath<CR>
 imap <A-r> :action ReplaceInPath<CR>
-map <A-a> :action GotoAction<CR>
-imap <A-a> :action GotoAction<CR>
-map <A-e> :action GotoFile<CR>
-imap <A-e> :action GotoFile<CR>
 map <A-t> :action GotoTest<CR>
 imap <A-t> :action GotoTest<CR>
-map <A-c> :action GotoClass<CR>
-imap <A-c> :action GotoClass<CR>
 
 map <leader>nc :action NewClass<CR>
 map <leader>nd :action NewDir<CR>
