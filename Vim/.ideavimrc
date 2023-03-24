@@ -183,14 +183,9 @@ imap ｊｊ <ESC>
 map ｄｄ dd
 map ｙｙ yy
 map ｃｃ cc
-map ｓ s
-map ｘ x
-map ｐ p
 map お o
 map い i
 map あ a
-vmap i <ESC>i
-vmap い <ESC>i
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " IDEA ACTION
@@ -273,4 +268,4 @@ let @m =']MV%(' " select method
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " temp
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-map 99 v"<A-e>
+map 99 v":action SearchEverywhere<CR>
