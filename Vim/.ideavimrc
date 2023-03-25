@@ -15,7 +15,7 @@ sethandler <C-J> a:ide
 sethandler <C-K> a:vim
 sethandler <C-L> a:vim
 sethandler <C-M> a:vim
-sethandler <C-M> a:vim
+sethandler <C-N> a:ide
 sethandler <C-O> a:vim
 sethandler <C-P> a:vim
 sethandler <C-Q> a:ide
@@ -40,7 +40,7 @@ let mapleader=" "
 set scrolloff=5
 set incsearch
 set hlsearch
-nmap <leader>sc :noh<CR>
+nmap nh :noh<CR>
 set ignorecase
 set smartcase
 set showcmd
@@ -170,6 +170,11 @@ vmap + g<C-a>
 map - <C-x>
 vmap - g<C-x>
 
+nmap <C-H> <C-W>h
+nmap <C-L> <C-W>l
+nmap <Tab> gt
+nmap <S-Tab> gT
+
 map J 5j
 map K 5k
 "" -- INSERT MODE --
@@ -189,7 +194,6 @@ map ｐ p
 map お o
 map い i
 map あ a
-vmap i <ESC>i
 vmap い <ESC>i
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -215,7 +219,7 @@ map <leader>co :action CloseAllEditorsButActive<CR>
 map <leader>ca :action CloseAllEditors<CR>
 map <leader>os :action SelectInProjectView<CR>
 map <leader>oe :action RevealIn<CR>
-map <leader>e :action RecentLocations<CR>
+map <A-E> :action RecentLocations<CR>
 
 " MULTIPLE-CURSORS
 map <A-n> :action SelectNextOccurrence<CR>
@@ -229,8 +233,8 @@ imap <A-w> :action SelectAllOccurrences<CR>
 
 " REFACTOR
 map ; :action EditorDuplicate<CR>
-map <C-l> :action ReformatCode<CR>
-imap <C-l> :action ReformatCode<CR>
+map <C-8> :action ReformatCode<CR>
+imap <C-8> :action ReformatCode<CR>
 map mn :action RenameFile<CR>
 map me :action RenameElement<CR>
 map ms :action ChangeSignature<CR>
@@ -259,6 +263,11 @@ imap <A-t> :action GotoTest<CR>
 map <leader>nc :action NewClass<CR>
 map <leader>nd :action NewDir<CR>
 map <leader>nf :action NewFile<CR>
+
+map mm :action ToggleBookmark<CR>
+map M :action ShowBookmarks<CR>
+map ma mA
+
 
 " alt+F7 FindUsages
 map <leader>ch :action CallHierarchy<CR>
