@@ -249,6 +249,8 @@ map <A-s> :action SurroundWith<CR>
 imap <A-s> :action SurroundWith<CR>
 map <A-i> :action Inline<CR>
 imap <A-i> :action Inline<CR>
+map <A-v> :action PasteMultiple<CR>
+imap <A-v> :action PasteMultiple<CR>
 
 " FIND FILE & ACTION
 map <A-f> :action FindInPath<CR>
