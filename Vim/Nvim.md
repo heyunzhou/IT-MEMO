@@ -27,3 +27,23 @@ Reload your shell configuration file to apply the changes:
 export PATH="/home/hyz/neovim/build/bin:$PATH"
 	alias vim='nvim'
 ```
+
+install LazyVim
+```shell
+https://www.lazyvim.org/installation
+```
+
+## Linux Setting
+```shell
+# ubuntu version
+ubuntu 22.04.2 LTS
+# fzf
+sudo apt-get install fzf
+# fdfind
+sudo apt-get install fdfind
+# tmux
+sudo apt-get install tmux
+# tealdeer
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+cargo install tealdeer
+```

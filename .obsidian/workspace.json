@@ -155,8 +155,10 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "67a82d13a101f398",
+  "active": "fb5dd28529954f13",
   "lastOpenFiles": [
+    "Vim/updateBashrc.bat",
+    "Vim/updateIdeavimrc - コピー.bat",
     "Vim/Vim.md",
     "Vim/Nvim.md",
     "Java8以後.md",
