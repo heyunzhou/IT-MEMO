@@ -40,7 +40,7 @@ ubuntu 22.04.2 LTS
 # fzf
 sudo apt-get install fzf
 # fdfind
-sudo apt-get install fdfind
+sudo apt-get install fd-find
 # tmux
 sudo apt-get install tmux
 # tealdeer
