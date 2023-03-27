@@ -133,17 +133,17 @@ source /usr/share/doc/fzf/examples/key-bindings.bash
 
 # git
 function git() {
-  if $(pwd -P | grep -q "^\/mnt\/[cde]\/*"); then
-    git.exe "$@"
-  else
-    command git "$@"
-  fi
+	if $(pwd -P | grep -q "^\/mnt\/[cde]\/*"); then
+		git.exe "$@"
+	else
+		command git "$@"
+	fi
 }
 
 # alias
 alias v='fd --type f --hidden --exclude .git | fzf-tmux -p | xargs nvim'
 alias cbr='git branch --sort=-committerdate | fzf --header "Checkout Recent Branch" --preview "git.exe diff {1} --color=always" --pointer="❤" | xargs git.exe checkout'
 alias cheat='tldr --list | fzf --preview "tldr {1} --color=always" --preview-window=right,70% | xargs tldr'
-
+alias cdf='cd $(fd -t d | fzf --prompt="Folder: " --height=50% --layout=reverse --border)'
 # cargo to install tealdeer
 . "$HOME/.cargo/env"
