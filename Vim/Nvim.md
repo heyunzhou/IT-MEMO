@@ -37,13 +37,19 @@ https://www.lazyvim.org/installation
 ```shell
 # ubuntu version
 ubuntu 22.04.2 LTS
+# starship
+curl -sS https://starship.rs/install.sh | sh
 # fzf
 sudo apt-get install fzf
 # fdfind
 sudo apt-get install fd-find
 # tmux
 sudo apt-get install tmux
+# ripgrep
+sudo apt-get install ripgrep
 # tealdeer
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+sudo apt-get install build-essential
 cargo install tealdeer
+tldr --update
 ```
