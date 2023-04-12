@@ -47,6 +47,8 @@ sudo apt-get install fd-find
 sudo apt-get install tmux
 # ripgrep
 sudo apt-get install ripgrep
+# zoxide
+sudo apt-get install zoxide
 # tealdeer
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 sudo apt-get install build-essential
