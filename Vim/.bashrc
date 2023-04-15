@@ -146,8 +146,22 @@ alias v='fd --type f --hidden --exclude .git | fzf-tmux -p | xargs nvim'
 alias cbr='git branch --sort=-committerdate | fzf --header "Checkout Recent Branch" --preview "git.exe diff {1} --color=always" --pointer="❤" | xargs git.exe checkout'
 alias cheat='tldr --list | fzf --preview "tldr {1} --color=always" --preview-window=right,70% | xargs tldr'
 alias cdf='cd $(fd -t d | fzf --prompt="Folder: " --height=50% --layout=reverse --border)'
+
 # cargo to install tealdeer
 . "$HOME/.cargo/env"
 
 # zoxide is a smarter cd command
 eval "$(zoxide init bash)"
+
+# quick cd
+function cdl() {
+        PATH_LIST_FILE=~/.favoriteCdl
+        if [ ! -f $PATH_LIST_FILE ] ; then
+                touch $PATH_LIST_FILE
+                echo "first time use cdl, init ${PATH_LIST_FILE} please"
+                return
+        fi
+        readarray -t items < $PATH_LIST_FILE
+        dir=$(printf "%s\n" ${items[@]} | fzf --prompt="Folder: " --height=50% --layout=reverse --border)
+        cd $(fd . ${dir} -t d | fzf --prompt="Folder: " --height=50% --layout=reverse --border)
+}
