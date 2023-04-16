@@ -54,4 +54,6 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 sudo apt-get install build-essential
 cargo install tealdeer
 tldr --update
+# wslview
+sudo apt install wslu
 ```
