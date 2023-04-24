@@ -84,6 +84,20 @@ public void create(@Validated SampleDataParam param, BindingResult result, Model
 }
 ```
 
+## POSTのリダイレクト
+```java
+ @RequestMapping(value = "/accounts", method = RequestMethod.POST)
+ public String handle(@Valid Form form, BindingResult result, RedirectAttributes redirectAttrs) {
+   if (result.hasErrors()) {
+   redirectAttrs.addFlashAttribute(
+	   BindingResult.MODEL_KEY_PREFIX.concat("modelAttribute of form"),
+	   bindingResult);
+     return "redirect:initPage";
+   }
+   return "success";
+ }
+```
+
 ## グループ化
 
 ```java
