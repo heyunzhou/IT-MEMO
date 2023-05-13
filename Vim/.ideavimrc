@@ -156,6 +156,7 @@ nmap n nzz
 nmap N Nzz
 
 nmap Y y$
+nmap gu <C-R>
 "" -- Change Indent --
 nmap > >>
 nmap < <<
