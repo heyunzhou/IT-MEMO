@@ -275,6 +275,7 @@ map <leader>nf :action NewFile<CR>
 " BookMark
 map mm :action ToggleBookmark<CR>
 map M :action ShowBookmarks<CR>
+map <C-M> :action ToggleBookmarkWithMnemonic<CR>
 map ma mA
 
 " alt+F7 FindUsages
