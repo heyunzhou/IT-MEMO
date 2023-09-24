@@ -224,6 +224,9 @@ map <leader>ca :action CloseAllEditors<CR>
 map <leader>os :action SelectInProjectView<CR>
 map <leader>oe :action RevealIn<CR>
 map <A-E> :action RecentLocations<CR>
+imap <A-E> :action RecentLocations<CR>
+map <A-W> :action FileStructurePopup<CR>
+imap <A-W> :action FileStructurePopup<CR>
 
 " MULTIPLE-CURSORS
 map <A-n> :action SelectNextOccurrence<CR>
