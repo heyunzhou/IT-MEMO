@@ -169,7 +169,7 @@ map H ^
 map L $
 
 "u undo
-map U :action $Redo<CR>
+nmap U :action $Redo<CR>
 
 nmap + <C-a>
 vmap + g<C-a>
