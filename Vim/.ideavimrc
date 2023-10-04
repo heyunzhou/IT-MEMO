@@ -297,6 +297,8 @@ map <C-U> :action GotoSuperMethod<CR>
 map <C-W> :action EditorSelectWord<CR>
 map <C-;> :action EditorCompleteStatement<CR>
 imap <C-;> :action EditorCompleteStatement<CR>
+map <C-Tab> :action Switcher<CR>
+imap <C-Tab> :action Switcher<CR>
 
 " Code
 map <C-O> :action OverrideMethods<CR>
