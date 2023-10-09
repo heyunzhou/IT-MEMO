@@ -31,6 +31,7 @@ sethandler <C-Y> a:vim
 sethandler <C-[> a:ide
 sethandler <C-\> a:vim
 sethandler <C-]> a:vim
+sethandler <C-;> a:vim
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " VIM Setting
@@ -155,9 +156,6 @@ nmap y' yi'
 nmap c' ci'
 nmap d' di'
 
-nmap n nzz
-nmap N Nzz
-
 nmap Y y$
 "" -- Change Indent --
 nmap > >>
@@ -175,9 +173,6 @@ nmap + <C-a>
 vmap + g<C-a>
 map - <C-x>
 vmap - g<C-x>
-
-nmap <Tab> gt
-nmap <S-Tab> gT
 
 map J 5j
 map K 5k
@@ -221,7 +216,7 @@ map <leader>x :action CloseContent<CR>
 map <leader>X :action ReopenClosedTab<CR>
 map <leader>co :action CloseAllEditorsButActive<CR>
 map <leader>ca :action CloseAllEditors<CR>
-map <leader>os :action SelectInProjectView<CR>
+map <leader>1 :action SelectInProjectView<CR>
 map <leader>oe :action RevealIn<CR>
 map <A-E> :action RecentLocations<CR>
 imap <A-E> :action RecentLocations<CR>
@@ -239,7 +234,6 @@ imap <A-A> :action SelectAllOccurrences<CR>
 " S-F3 move to previous occurrence
 
 " REFACTOR
-map ; :action EditorDuplicate<CR>
 map <C-L> :action ReformatCode<CR>
 imap <C-L> :action ReformatCode<CR>
 map mn :action RenameFile<CR>
@@ -262,8 +256,6 @@ imap <C-T> :action Refactorings.QuickListPopupAction<CR>
 " FIND FILE & ACTION
 map <A-f> :action FindInPath<CR>
 imap <A-f> :action FindInPath<CR>
-map / :action Find<CR>
-map ? :action Replace<CR>
 map <A-r> :action ReplaceInPath<CR>
 imap <A-r> :action ReplaceInPath<CR>
 map <A-t> :action GotoTest<CR>
@@ -297,8 +289,8 @@ map <C-U> :action GotoSuperMethod<CR>
 map <C-W> :action EditorSelectWord<CR>
 map <C-;> :action EditorCompleteStatement<CR>
 imap <C-;> :action EditorCompleteStatement<CR>
-map <C-Tab> :action Switcher<CR>
-imap <C-Tab> :action Switcher<CR>
+map <Tab> :action Switcher<CR>
+map <S-Tab> :action NextSplitter<CR>
 
 " Code
 map <C-O> :action OverrideMethods<CR>
