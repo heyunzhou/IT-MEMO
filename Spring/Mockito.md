@@ -16,11 +16,17 @@ void init() {
 void test(){
 	Mockito.when(dbService.findData(eq("sql"), any())).thenReturn("some");
 	Object act = fooService.apply();
+	
+	verify(dbService, times(One)).find(any());
 	assetThat(act.num, is(exNum))
 }
 ```
 
 ## Mock Action
+### mock property
+```java
+ReflectionTestUtils.setField(dbService, "propertyName", "value");
+```
 ### return value
 ```java
 when(dbService.find(eq("query"))).thenReturn(new Entity());
