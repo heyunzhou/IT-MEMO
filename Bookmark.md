@@ -11,5 +11,9 @@ https://quickref.me/
 https://wangchujiang.com/reference/
 
 Linux Cookbook
-
 https://wangchujiang.com/linux-command/c/sed.html
+
+spinner
+https://spin.js.org/
+
+
