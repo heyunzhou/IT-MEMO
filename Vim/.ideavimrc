@@ -278,8 +278,8 @@ map <A-C> :action CopyFileName<CR>
 imap <A-C> :action CopyFileName<CR>
 map <C-Q> :action CallHierarchy<CR>
 imap <C-Q> :action CallHierarchy<CR>
-map <leader>gh :action Vcs.ShowTabbedFileHistory<CR>
-map <leader>gH :action Vcs.ShowHistoryForBlock<CR>
+nmap gh :action Vcs.ShowTabbedFileHistory<CR>
+vmap gh :action Vcs.ShowHistoryForBlock<CR>
 map <leader>dr :action CopyReference<CR>
 
 " Other
