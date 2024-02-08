@@ -49,11 +49,6 @@ sudo apt-get install tmux
 sudo apt-get install ripgrep
 # zoxide
 sudo apt-get install zoxide
-# tealdeer
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-sudo apt-get install build-essential
-cargo install tealdeer
-tldr --update
 # wslview to open windows app
 sudo apt-get install wslu
 # bat

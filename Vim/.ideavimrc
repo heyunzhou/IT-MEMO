@@ -41,11 +41,11 @@ let mapleader=" "
 set scrolloff=5
 set incsearch
 set hlsearch
-nmap nh :noh<CR>
 set ignorecase
 set smartcase
 set showcmd
 set showmode
+nmap nh :noh<CR>
 " ColorScheme>General>line number on caret row=DC2965
 " ColorScheme>General>line number=60778E
 set number
@@ -59,6 +59,8 @@ map <leader>9  :action IdeaVim.ReloadVimRc.reload<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set ideajoin
 set highlightedyank
+set vim-surround
+set textobj-entire
 "" PLUGIN
 set ReplaceWithRegister
 " gr doPaste
@@ -84,6 +86,7 @@ map f <Plug>(easymotion-s2)
 
 "" PLUGIN
 set NERDTree
+map <leader>e :action SelectInProjectView<CR>
 " Key	Description
 " o		Open files, directories and bookmarks
 " i		Open selected file in a split window
@@ -175,7 +178,6 @@ map K 5k
 "" -- INSERT MODE --
 imap <C-k> <C-o>D<Right>
 imap jj <ESC>
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Japanese
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -183,6 +185,7 @@ imap ｊｊ <ESC>
 map ｄｄ dd
 map ｙｙ yy
 map ｃｃ cc
+map ｃ c
 map ｓ s
 map ｘ x
 map ｐ p
@@ -197,7 +200,8 @@ vmap い <ESC>i
 " DEBUG
 map <leader>w :action Debugger.AddToWatch<CR>
 map <leader>b :action ToggleLineBreakpoint<CR>
-map <leader>B :action Debugger.RemoveAllBreakpoints<CR>
+map <Leader>B :action ViewBreakpoints<CR>
+map <leader>ab :action Debugger.RemoveAllBreakpoints<CR>
 map <leader>d :action Debug<CR>
 map <leader>D :action DebugClass<CR>
 " S-f9 debug
@@ -207,6 +211,7 @@ map <leader>D :action DebugClass<CR>
 " C-f2 stop
 
 " WINDOW
+map <S-Tab> :action NextSplitter<CR>
 map <leader><Right> :action SplitVertically<CR>
 map <leader><Left> :action MoveEditorToOppositeTabGroup<CR>
 map <leader><Down> :action SplitHorizontally<CR>
@@ -214,12 +219,9 @@ map <leader>x :action CloseContent<CR>
 map <leader>X :action ReopenClosedTab<CR>
 map <leader>co :action CloseAllEditorsButActive<CR>
 map <leader>ca :action CloseAllEditors<CR>
-map <leader>1 :action SelectInProjectView<CR>
 map <leader>oe :action RevealIn<CR>
 map <A-E> :action RecentLocations<CR>
 imap <A-E> :action RecentLocations<CR>
-map <A-W> :action FileStructurePopup<CR>
-imap <A-W> :action FileStructurePopup<CR>
 
 " MULTIPLE-CURSORS
 map <A-n> :action SelectNextOccurrence<CR>
@@ -244,8 +246,6 @@ map <A-q> :action IntroduceVariable<CR>
 imap <A-q> :action IntroduceVariable<CR>
 map <A-s> :action SurroundWith<CR>
 imap <A-s> :action SurroundWith<CR>
-" map <A-i> :action Inline<CR>
-" imap <A-i> :action Inline<CR>
 map <A-v> :action PasteMultiple<CR>
 imap <A-v> :action PasteMultiple<CR>
 map <C-T> :action Refactorings.QuickListPopupAction<CR>
@@ -269,18 +269,16 @@ map <leader>nf :action NewFile<CR>
 map mm :action ToggleBookmark<CR>
 map M :action ShowBookmarks<CR>
 map <C-M> :action ToggleBookmarkWithMnemonic<CR>
-map ma mA
 
 " alt+F7 FindUsages
 map <A-B> :action ShowUsages<CR>
 imap <A-B> :action ShowUsages<CR>
-map <A-C> :action CopyFileName<CR>
-imap <A-C> :action CopyFileName<CR>
 map <C-Q> :action CallHierarchy<CR>
 imap <C-Q> :action CallHierarchy<CR>
+
+" Git
 nmap gh :action Vcs.ShowTabbedFileHistory<CR>
 vmap gh :action Vcs.ShowHistoryForBlock<CR>
-map <leader>dr :action CopyReference<CR>
 
 " Other
 map <C-U> :action GotoSuperMethod<CR>
@@ -288,12 +286,23 @@ map <C-W> :action EditorSelectWord<CR>
 map <C-;> :action EditorCompleteStatement<CR>
 imap <C-;> :action EditorCompleteStatement<CR>
 map <Tab> :action RecentFiles<CR>
-map <S-Tab> :action NextSplitter<CR>
+map <leader>dr :action CopyReference<CR>
+map <A-C> :action CopyFileName<CR>
+imap <A-C> :action CopyFileName<CR>
 
 " Code
 map <C-O> :action OverrideMethods<CR>
+""""""""""""""""""""""""""""""""""""""popup""""""""""""""""""""""""""""""""
+map <A-W> :action FileStructurePopup<CR>
+imap <A-W> :action FileStructurePopup<CR>
 map <A-g> :action Generate<CR>
 imap <A-g> :action Generate<CR>
+nnoremap <Leader>pm :action ShowPopupMenu<CR>
+""""""""""""""""""""""""""""""""""""""Search""""""""""""""""""""""""""""""""
+map <Leader>ga :action GotoAction<CR>
+map <Leader>gc :action GotoClass<CR>
+map <Leader>gf :action GotoFile<CR>
+map <Leader>gs :action GotoSymbol<CR>
 
 " Macros
 map vm @m
