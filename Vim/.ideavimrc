@@ -119,7 +119,6 @@ map zm zM
 map zr zR
 
 "" -- NORMAL MODE --
-nmap <leader>p "0p
 nmap <C-H> vwgr
 nmap <C-p> Vgr
 
@@ -236,6 +235,7 @@ imap <A-A> :action SelectAllOccurrences<CR>
 " REFACTOR
 map <C-L> :action ReformatCode<CR>
 imap <C-L> :action ReformatCode<CR>
+" Default <C-A-O> :action OptimizeImports<CR>
 map mn :action RenameFile<CR>
 map me :action RenameElement<CR>
 map ms :action ChangeSignature<CR>
@@ -256,8 +256,6 @@ map <A-f> :action FindInPath<CR>
 imap <A-f> :action FindInPath<CR>
 map <A-r> :action ReplaceInPath<CR>
 imap <A-r> :action ReplaceInPath<CR>
-map <A-t> :action GotoTest<CR>
-imap <A-t> :action GotoTest<CR>
 map <A-I> :action QuickImplementations<CR>
 imap <A-I> :action QuickImplementations<CR>
 
@@ -279,9 +277,9 @@ imap <C-Q> :action CallHierarchy<CR>
 " Git
 nmap gh :action Vcs.ShowTabbedFileHistory<CR>
 vmap gh :action Vcs.ShowHistoryForBlock<CR>
+map tt :action Annotate<CR>
 
 " Other
-map <C-U> :action GotoSuperMethod<CR>
 map <C-W> :action EditorSelectWord<CR>
 map <C-;> :action EditorCompleteStatement<CR>
 imap <C-;> :action EditorCompleteStatement<CR>
@@ -289,10 +287,14 @@ map <Tab> :action RecentFiles<CR>
 map <leader>dr :action CopyReference<CR>
 map <A-C> :action CopyFileName<CR>
 imap <A-C> :action CopyFileName<CR>
+""""""""""""""""""""""""""""""""""""""Navi""""""""""""""""""""""""""""""""
+map <A-t> :action GotoTest<CR>
+imap <A-t> :action GotoTest<CR>
+map <C-U> :action GotoSuperMethod<CR>
 
 " Code
 map <C-O> :action OverrideMethods<CR>
-""""""""""""""""""""""""""""""""""""""popup""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""Popup""""""""""""""""""""""""""""""""
 map <A-W> :action FileStructurePopup<CR>
 imap <A-W> :action FileStructurePopup<CR>
 map <A-g> :action Generate<CR>
