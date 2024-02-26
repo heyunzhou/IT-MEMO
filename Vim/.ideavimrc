@@ -61,6 +61,7 @@ set ideajoin
 set highlightedyank
 set vim-surround
 set textobj-entire
+set keep-english-in-normal-and-restore-in-insert
 "" PLUGIN
 set ReplaceWithRegister
 " gr doPaste
@@ -119,8 +120,9 @@ map zm zM
 map zr zR
 
 "" -- NORMAL MODE --
-nmap <C-H> vwgr
-nmap <C-p> Vgr
+nmap <leader>p vwgr
+nmap <leader>P Vgr
+vmap p gr
 
 nmap vv <C-v>
 
@@ -299,7 +301,7 @@ map <A-W> :action FileStructurePopup<CR>
 imap <A-W> :action FileStructurePopup<CR>
 map <A-g> :action Generate<CR>
 imap <A-g> :action Generate<CR>
-nnoremap <Leader>pm :action ShowPopupMenu<CR>
+nmap <Leader>gm :action ShowPopupMenu<CR>
 """"""""""""""""""""""""""""""""""""""Search""""""""""""""""""""""""""""""""
 map <Leader>ga :action GotoAction<CR>
 map <Leader>gc :action GotoClass<CR>
