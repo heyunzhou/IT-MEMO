@@ -82,8 +82,8 @@ vmap ' S'
 "" PLUGIN
 set easymotion
 map f <Plug>(easymotion-s2)
-" <leader><leader> k jump up lines
-" <leader><leader> j jump down lines
+map J <Plug>(easymotion-j)
+map K <Plug>(easymotion-k)
 
 "" PLUGIN
 set NERDTree
@@ -121,10 +121,13 @@ map zr zR
 
 "" -- NORMAL MODE --
 nmap <leader>p vwgr
-nmap <leader>P Vgr
+nmap <leader><leader>p Vgr
 vmap p gr
+map <A-p> :action PasteMultiple<CR>
+imap <A-p> :action PasteMultiple<CR>
 
-nmap vv <C-v>
+map vv V
+map <leader><leader>v <C-v>
 
 nmap vw viw
 nmap yw yiw
@@ -174,8 +177,6 @@ vmap + g<C-a>
 map - <C-x>
 vmap - g<C-x>
 
-map J 5j
-map K 5k
 "" -- INSERT MODE --
 imap <C-k> <C-o>D<Right>
 imap jj <ESC>
@@ -248,8 +249,6 @@ map <A-q> :action IntroduceVariable<CR>
 imap <A-q> :action IntroduceVariable<CR>
 map <A-s> :action SurroundWith<CR>
 imap <A-s> :action SurroundWith<CR>
-map <A-v> :action PasteMultiple<CR>
-imap <A-v> :action PasteMultiple<CR>
 map <C-T> :action Refactorings.QuickListPopupAction<CR>
 imap <C-T> :action Refactorings.QuickListPopupAction<CR>
 
