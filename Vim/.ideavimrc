@@ -45,7 +45,7 @@ set ignorecase
 set smartcase
 set showcmd
 set showmode
-nmap nh :noh<CR>
+nmap <ESC> :noh<CR>
 " ColorScheme>General>line number on caret row=DC2965
 " ColorScheme>General>line number=60778E
 set number
@@ -139,6 +139,16 @@ nmap yb yib
 nmap cb cib
 nmap db dib
 
+nmap v{ vi{
+nmap y{ yi{
+nmap c{ ci{
+nmap d{ di{
+
+nmap v( vi(
+nmap y( yi(
+nmap c( ci(
+nmap d( di(
+
 nmap vB viB
 nmap yB yiB
 nmap cB ciB
@@ -168,6 +178,8 @@ vmap < <gv
 
 map H ^
 map L $
+map <S-DOWN> <DOWN>
+map <S-UP> <UP>
 
 "u undo
 nmap U :action $Redo<CR>
