@@ -49,7 +49,7 @@ nmap <leader><ESC> :noh<CR>
 " ColorScheme>General>line number on caret row=DC2965
 " ColorScheme>General>line number=60778E
 set number
-set relativenumber
+" set relativenumber
 set clipboard+=unnamed  " use the clipboards of vim and win
 " Don't use Ex mode, use Q for formatting.
 map Q gq
@@ -235,8 +235,9 @@ map <leader>D :action DebugClass<CR>
 
 " WINDOW
 map <S-Tab> :action NextSplitter<CR>
-map <leader><Right> :action SplitVertically<CR>
+map <leader><Right> :action MoveTabRight<CR>
 map <leader><Left> :action MoveEditorToOppositeTabGroup<CR>
+map <leader><Up> :action EditSourceInNewWindow<CR>
 map <leader><Down> :action SplitHorizontally<CR>
 map <leader>x :action CloseContent<CR>
 map <leader>X :action ReopenClosedTab<CR>
