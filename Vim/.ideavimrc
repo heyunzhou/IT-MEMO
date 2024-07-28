@@ -226,7 +226,7 @@ map <leader>b :action ToggleLineBreakpoint<CR>
 map <Leader>B :action ViewBreakpoints<CR>
 map <leader>ab :action Debugger.RemoveAllBreakpoints<CR>
 map <leader>d :action Debug<CR>
-map <leader>D :action DebugClass<CR>
+map <leader>D :action RunToCursor<CR>
 " S-f9 debug
 " S-f10 run
 " C-S-f10 run class
