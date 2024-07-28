@@ -35,8 +35,8 @@ https://www.lazyvim.org/installation
 
 ## Linux Setting
 ```shell
-# ubuntu version
-ubuntu 22.04.2 LTS
+# ubuntu version 24.04 LTS
+
 # starship
 curl -sS https://starship.rs/install.sh | sh
 # fzf
@@ -53,6 +53,6 @@ sudo apt-get install zoxide
 sudo apt-get install wslu
 # bat
 sudo apt-get install bat
-mkdir -p ~/.local/bin
-ln -s /usr/bin/batcat ~/.local/bin/bat
+# eza
+sudo apt-get install eza
 ```
